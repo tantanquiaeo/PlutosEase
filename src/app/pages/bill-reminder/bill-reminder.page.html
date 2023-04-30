@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bill Reminder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+ <ion-card>
+  <ion-card-header>
+    <ion-card-title>Reminders</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item *ngFor="let reminder of reminders" (click)="showReminderDetails(reminder)">
+        <ion-label>{{ reminder.title }}</ion-label>
+        <ion-button slot="end" color="danger" (click)="deleteReminder(reminder)">Delete</ion-button>
+      </ion-item>
+
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Add Reminder</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form #reminderForm="ngForm" (ngSubmit)="addReminder(reminderForm)">
+        <ion-item>
+          <ion-label position="floating">Reminder Title</ion-label>
+          <ion-input name="title" [(ngModel)]="newReminder.title" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Amount</ion-label>
+          <ion-input name="amount" [(ngModel)]="newReminder.amount" type="number" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Due Date</ion-label>
+          <ion-datetime display-format="MM/DD/YYYY" name="dueDate" [(ngModel)]="newReminder.dueDate" required></ion-datetime>
+        </ion-item>
+        <ion-button type="submit" expand="block">Add Reminder</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Reminder Details
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-text>{{reminder.title}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Due Date</ion-label>
+      <ion-text>{{reminder.dueDate | date:'MM dd yyyy'}}</ion-text>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Amount</ion-label>
+      <ion-text>{{reminder.amount | currency:'PHP'}}</ion-text>
+    </ion-item>
+  </ion-list>
+</ion-content>

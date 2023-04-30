@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>
+      About
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div class="ion-text-center">
+          <h1>Plutus Ease</h1>
+          <small>v{{ global.version }}</small>
+          
+        <p>Develop by:</p>
+        </div>
+
+      </ion-col>
+    </ion-row>
+    
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6" size-sm="3" class="ion-align-self-center">
+        <div class="avatar-container">
+          <ion-img class="avatar" src="../../../assets/img/cyrus.png"></ion-img>
+          <p class="avatar-text">Cyrus Tristan Quia-eo</p>
+          <div class="social-media-icons">
+            <a href="https://www.facebook.com/tristan.quiaeo"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/tristan_quiaeo/"><ion-icon name="logo-instagram"></ion-icon></a>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="6" size-sm="3" class="ion-align-self-center">
+        <div class="avatar-container">
+          <ion-img class="avatar" src="../../../assets/img/kim.png"></ion-img>
+          <p class="avatar-text">Kim Jaspher Rosales</p>
+          <div class="social-media-icons">
+            <a href="https://www.facebook.com/kimjaspher19"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/_kimrosaless/"><ion-icon name="logo-instagram"></ion-icon></a>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="6" size-sm="3" class="ion-align-self-center">
+        <div class="avatar-container">
+          <ion-img class="avatar" src="../../../assets/img/jerome.png"></ion-img>
+          <p class="avatar-text">Jerome Barrientos</p>
+          <div class="social-media-icons">
+            <a href="https://www.facebook.com/emorej.sotneirrab"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/jeeerrooommmeee/"><ion-icon name="logo-instagram"></ion-icon></a>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <div class="ion-text-center">
+          <ion-text color="medium">
+            <p>
+              A very simple budget planner and tracker application made for students to track their expenses
+            </p>
+          </ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <p class="ion-text-center">
+    <ion-text color="medium">
+      Powered by Ionic <ion-icon name="logo-ionic"></ion-icon>
+    </ion-text>
+  </p>
+</ion-footer>
+
+
+<style>
+  .avatar {
+  width: 100%;
+  height: auto;
+  border-radius: 20%;
+  margin-bottom: 10px;
+}
+
+.avatar-text {
+  margin: 0;
+}
+
+.avatar-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-media-icons ion-icon {
+  font-size: 28px;
+  margin: 0 10px;
+  -webkit-text-fill-color: transparent;
+}
+
+
+</style>
